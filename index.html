@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Yogiriz — A Personal Website.</title>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="mynavbar container">
+      <div class="kotakhitam"></div>
+      <a class="navbar-brand" href="#">Graphic/UX<br>Designer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="myemail navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="navbar-brand" href="mailto:helloyogiriz@gmail.com">Email:helloyogiriz@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-11">
+        <!-- <div class="wrapper"><p><a class="effect-shine">Yogiriz.</a></p></div> -->
+        <!-- <p>Yogiriz.</p> -->
+
+        <p class="ml11">
+          <span class="text-wrapper">
+            <span class="line line1"></span>
+            <span class="letters">Yogiriz</span>
+          </span>
+        </p>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+        <script>
+            // Wrap every letter in a span
+            var textWrapper = document.querySelector('.ml11 .letters');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({loop: true})
+            .add({
+              targets: '.ml11 .line',
+              scaleY: [0,1],
+              opacity: [0.5,1],
+              easing: "easeOutExpo",
+              duration: 700
+            })
+            .add({
+              targets: '.ml11 .line',
+              translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+              easing: "easeOutExpo",
+              duration: 700,
+              delay: 100
+            }).add({
+              targets: '.ml11 .letter',
+              opacity: [0,1],
+              easing: "easeOutExpo",
+              duration: 1500,
+              offset: '-=775',
+              delay: (el, i) => 34 * (i+1)
+            }).add({
+              targets: '.ml11',
+              opacity: 0,
+              duration: 1000,
+              easing: "easeOutExpo",
+              delay: 1000
+            });
+          </script>
+
+        </div>
+        <!-- <div class="col-7"></div> -->
+        <div class="col-1">
+          <div class="buttonicon">
+            <div class="outer-wrapper">
+              <div class="frame">
+                <a href="https://github.com/Yogiriz" target="_blank"> 
+                  <input type="image" id="image" alt="github" src="img/icons8_github_512px_3.png" onmouseover="this.src='img/github_warna.png'" onmouseout="this.src='img/icons8_github_512px_3.png'" height="40px">
+                </a>
+              </div>
+            </div>
+            <br>
+            <div class="outer-wrapper">
+              <div class="frame">
+                <a href="https://www.instagram.com/yogiriz" target="_blank"> 
+                  <input type="image" id="image" alt="instagram" src="img/icons8_instagram_512px_1.png" onmouseover="this.src='img/instagram_warna.png'" onmouseout="this.src='img/icons8_instagram_512px_1.png'" height="40px">
+                </a>
+              </div>
+            </div>
+            <br>
+            <div class="outer-wrapper">
+              <div class="frame">
+                <a href="https://www.twitter.com/yogiriz" target="_blank"> 
+                  <input type="image" id="image" alt="twitter" src="img/icons8_twitter_512px_1.png" onmouseover="this.src='img/twitter_warna.png'" onmouseout="this.src='img/icons8_twitter_512px_1.png'"  height="40px">
+                </a>
+              </div>
+            </div>
+            <div class="outer-wrapper">
+              <div class="frame">
+                <a href="https://medium.com/@yogiriz" target="_blank"> 
+                  <input type="image" id="image" alt="medium" src="img/icons8_medium_monogram_512px_1.png" onmouseover="this.src='img/medium_warna.png'" onmouseout="this.src='img/icons8_medium_monogram_512px_1.png'" height="35px">
+                </a>
+              </div>
+            </div>
+            <div class="outer-wrapper">
+              <div class="frame">
+                <a href="https://www.linkedin.com/in/tri-yogi-rizqi-512386183/" target="_blank"> 
+                  <input type="image" id="image" alt="linkedin" src="img/icons8_linkedin_512px_1.png" onmouseover="this.src='img/linkedin_warna.png'" onmouseout="this.src='img/icons8_linkedin_512px_1.png'" height="35px">
+                </a>
+              </div>
+            </div>
+            <div class="outer-wrapper">
+              <div class="frame">
+                <a href="https://dribbble.com/yogiriz" target="_blank"> 
+                  <input type="image" id="image" alt="dribbble" src="img/icons8_dribbble_512px_1.png" onmouseover="this.src='img/dribbble_warna.png'" onmouseout="this.src='img/icons8_dribbble_512px_1.png'" height="40px">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="myskill col-2">
+          <p> <strong> UI Design </strong> <br> Started as Graphic Designer and interested to User Interface design.</p>
+        </div>
+        <div class="col-1"></div>
+        <div class="myskill col-2">
+          <p> <strong> Research </strong> <br> Likes to analyze and find out something makes me interested in UX.</p>
+        </div>
+        <div class="col-1"></div>
+        <div class="myskill col-2">
+          <p> <strong> Actually ... </strong> <br> I just love to learn something new <3 </p>
+          </div>
+          <div class="col-4"></div>
+        </div>
+
+      </div>
+
+<!--     <div class="container-md-fluid">
+      <div class="row">
+        <div class="col-1"> <div class="cekgrid" style="background-color:#C5FF44"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#C3CC00"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#323000"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#2E0066"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#88B1FF"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#C5FF44"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#323000"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#C5FF44"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#323000"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#C5FF44"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#323000"></div> </div>
+        <div class="col-1"> <div class="cekgrid" style="background-color:#C5FF44"></div> </div>
+      
+      </div>
+      
+    </div> -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  </html>
